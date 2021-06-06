@@ -14,6 +14,14 @@ input.onButtonPressed(Button.AB, function () {
     }
     basic.pause(500)
     basic.showString("finish counting!!!")
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(247, music.beat(BeatFraction.Whole))
+    music.playTone(220, music.beat(BeatFraction.Whole))
+    music.playTone(196, music.beat(BeatFraction.Whole))
+    music.playTone(175, music.beat(BeatFraction.Whole))
+    music.playTone(165, music.beat(BeatFraction.Whole))
+    music.playTone(147, music.beat(BeatFraction.Whole))
+    music.playTone(131, music.beat(BeatFraction.Double))
 })
 input.onButtonPressed(Button.B, function () {
     x = x - 1
