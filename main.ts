@@ -1,18 +1,25 @@
 input.onButtonPressed(Button.A, function () {
-    music.playMelody("C5 B A G F E D C ", 120)
+    x = x + 1
+    basic.showNumber(x)
 })
 input.onGesture(Gesture.Shake, function () {
-    soundExpression.slide.playUntilDone()
+    x = 0
+    basic.showNumber(x)
+})
+input.onButtonPressed(Button.AB, function () {
+    while (x != 0) {
+        basic.pause(1000)
+        x = x - 1
+        basic.showNumber(x)
+    }
+    basic.pause(500)
+    basic.showString("finish counting!!!")
 })
 input.onButtonPressed(Button.B, function () {
-    music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
+    x = x - 1
+    basic.showNumber(x)
 })
+let x = 0
 basic.showString("DaSu rugger's club!")
 basic.showIcon(IconNames.Happy)
-basic.showLeds(`
-    . . # . .
-    # # # # #
-    . . # . .
-    . # . # .
-    # . . . #
-    `)
+basic.clearScreen()
